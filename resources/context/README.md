@@ -8,7 +8,7 @@ The user wants autonomous driving and first signs of mapping first. The rover is
 
 Data will be streamed to a laptop rather than relying on an onboard Raspberry Pi. The laptop performs higher-level processing. The robot retains local motor control and immediate stopping behavior.
 
-Additional project goal: record imagery whenever a suspected hazard is identified, preserve it, and send it to an AI service for advisory hazard assessment. The exact AI/model name was unclear in speech and must not be guessed. Model outputs are possible-hazard, no-hazard-detected, or unknown assessments, not human safety clearance. Failure to detect a hazard does not establish safety.
+Additional project goal: record imagery whenever a suspected hazard is identified, preserve it, and send it to an AI service for advisory hazard assessment. The intended model has now been identified as Cloudflare Clef-Flash, Q8_0; see ai-model.md for verified sources and remaining runtime checks. Model outputs are possible-hazard, no-hazard-detected, or unknown assessments, not human safety clearance. Failure to detect a hazard does not establish safety.
 
 ## Architecture and compliance status
 
@@ -25,7 +25,7 @@ Proposed separation: ESP motion/encoder subsystem; processor-equipped camera/cap
 
 ## Unresolved details
 
-Budget and equipment; camera hardware/processor; horizontal range sensor and placement; Wi-Fi operating conditions; exact AI provider/model; automatic hazard triggers and dataset; internet service; controller compliance; test arena and numerical acceptance targets; student/school details; full proposal deadline. The deadline around the 15th is for the proposal, not completion of the robot.
+Budget and equipment; camera hardware/processor; horizontal range sensor and placement; Wi-Fi operating conditions; AI runtime and PC hardware validation; automatic hazard triggers and dataset; internet service; controller compliance; test arena and numerical acceptance targets; student/school details; full proposal deadline. The deadline around the 15th is for the proposal, not completion of the robot.
 
 ## Historical sources
 
@@ -33,7 +33,7 @@ Four originals and extracted texts are retained and indexed in `../sources.json`
 
 ## Follow-up — local AI hosting preference, 6 October 2026
 
-The user prefers to run the image-analysis model locally on their home PC and can leave the PC running when needed. This may be a separate host from the laptop controlling the rover; network access and machine roles are not finalized. The spoken candidate model name remains ambiguous. Q8_0 alone identifies a quantization format, not the model, its size, or its image-input capability. Do not record the candidate as a confirmed Cloudflare product or assume successful local execution before verifying the exact model and PC hardware.
+The user prefers to run the image-analysis model locally on their home PC and can leave the PC running when needed. This may be a separate host from the laptop controlling the rover; network access and machine roles are not finalized. Subsequent clarification and source verification identified Cloudflare Clef-Flash, Q8_0. It supports image input and typed decisions. Successful local execution and latency on the user’s PC remain unverified; see ai-model.md.
 
 Captured images should be associated with suspected hazard locations on the planar map. The goal is to identify visible hazard cues and display advisory flags, with uncertainty and human review. Images cannot establish structural stability, breathable air, or absence of hidden hazards.
 
