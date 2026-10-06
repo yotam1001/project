@@ -25,7 +25,7 @@ Proposed separation: ESP motion/encoder subsystem; processor-equipped camera/cap
 
 ## Unresolved details
 
-Budget and equipment; camera hardware/processor; horizontal range sensor and placement; Wi-Fi operating conditions; AI runtime and PC hardware validation; automatic hazard triggers and dataset; internet service; controller compliance; test arena and numerical acceptance targets; student/school details; full proposal deadline. The deadline around the 15th is for the proposal, not completion of the robot.
+Budget and equipment; camera hardware/processor; horizontal range sensor and placement; Wi-Fi operating conditions; AI runtime integration and image evaluation; automatic hazard triggers and dataset; internet service; controller compliance; test arena and numerical acceptance targets; student/school details; full proposal deadline. The deadline around the 15th is for the proposal, not completion of the robot.
 
 ## Historical sources
 
@@ -44,5 +44,7 @@ The camera/ESP two-controller and independent-subsystem requirement remains expl
 The user requested a redesigned Hebrew proposal in native Google Docs, based on the original supplied DOCX template. The exact goal and problem statement must remain explicit editable spaces for the team, because the application may change. Do not infer the final application from the rescue-inspired example. The Google Doc is the latest proposal; earlier Word/PDF drafts are reference versions.
 
 The user reports having already checked home-PC hardware suitability for Clef-Flash Q8_0; accept that report for planning rather than repeatedly requesting a hardware check. Project-specific image evaluation and integration tests remain future work. Camera/controller compliance remains unknown pending the user’s supervisor check.
+
+The latest proposal uses the user-supplied `yotam-hebrew-writing` guidance, saved in `skills/yotam-hebrew-writing/`. Its referenced style evidence files were not included. The editable block diagram is the **תרשים מלבנים: הצעת הפרויקט** page on https://www.tldraw.com/f/4aOaHZDyKxk2AseGkkgxy. The original prototype page remains historical. Exported diagram assets are in `resources/diagrams/`.
 
 Editable proposal: https://docs.google.com/document/d/1fzNJpmtbakEgXjv7uT-z_8NCtRAehNbJFDoFE5lqjn0

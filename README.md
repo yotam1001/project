@@ -8,7 +8,7 @@ A pair project, 5 units, in high-school Electronics and Computers Engineering. C
 - Sensor, encoder, and camera data are sent to a laptop for navigation, mapping, recording, and AI-service integration.
 - A phone interface displays the map, rover state, captured images, and hazard flags.
 - Mapping is planar for now: no 3D reconstruction, elevation mapping, or measurement of vertical drops. The horizontal-distance sensing method is still to be selected.
-- When a suspected hazard is identified, save imagery and request an AI assessment. Preferred deployment: a locally hosted image-capable model on the user’s home PC, kept running when needed. The intended model is Cloudflare Clef-Flash, Q8_0, now identified from its published model documentation. Local hardware suitability and latency remain untested. See [AI model notes](resources/context/ai-model.md).
+- When a suspected hazard is identified, save imagery and request an AI assessment. Preferred deployment: a locally hosted image-capable model on the user’s home PC, kept running when needed. The intended model is Cloudflare Clef-Flash, Q8_0, identified from its published model documentation. The user has checked home-PC hardware suitability; runtime integration, latency and project-image evaluation remain future work. See [AI model notes](resources/context/ai-model.md).
 - AI can flag possible hazards or return uncertainty; it cannot certify a cave or route as safe for people.
 - Cleaning hardware is outside the active scope. The previous cleaning concept is preserved in the archive.
 
@@ -24,7 +24,8 @@ The latest Hebrew proposal is an editable [Google Doc](https://docs.google.com/d
 - [Earlier technical proposal source](resources/context/proposal-working-draft.md)
 - [Earlier proposal PDF](resources/proposal/robot-project-proposal-draft.pdf)
 - [Earlier Word proposal](resources/proposal/robot-project-proposal-draft.docx)
-- [Functional block diagram](resources/proposal/robot-block-diagram.png)
+- [Editable tldraw block diagram and exported assets](resources/diagrams/README.md)
+- [User supplied Hebrew writing skill](skills/yotam-hebrew-writing/README.md)
 
 This is a planning repository, not implemented robot firmware. Hardware, budget, acceptance thresholds, AI runtime/hardware validation, and supervisor approval are pending. The camera only represents a second controller if it has an independent processor and functional subsystem; an ordinary camera sensor alone does not. School acceptance of the controller arrangement remains unresolved.
 

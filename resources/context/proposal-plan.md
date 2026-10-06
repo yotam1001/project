@@ -6,7 +6,7 @@
 4. Select motors/encoders, distance sensors, camera hardware, power supply, communication, laptop, and phone interface according to budget and available equipment.
 5. Research source-backed alternatives: teleoperated inspection, autonomous planar mapping, and existing exploration robots. No commercial survey has yet been verified.
 6. Select horizontal-distance measurement and basic algorithms. Define test metrics and error limits; leave full SLAM and real cave operation outside the first commitment.
-7. Specify hazard capture, event storage, and AI advisory output. Preferred hosting is on the user’s home PC. Cloudflare Clef-Flash Q8_0 is the intended model, and image-input support is documented. Verify compatible runtime, hardware requirements, and latency on the user’s PC.
+7. Specify hazard capture, event storage, and AI advisory output. Preferred hosting is on the user’s home PC. Cloudflare Clef-Flash Q8_0 is the intended model, and image-input support is documented. The user has already checked hardware suitability. Verify compatible runtime integration and project-specific latency during implementation.
 8. Complete cover details, explained block diagram, component list, and proposal PDF. Review revised scope and acceptance criteria with the supervisor.
 
 The deadline around the 15th is for the proposal only; its full date is unconfirmed. The current circular's examiner-submission deadline is 30 October of the school year. The generator and proposal outputs reflect the revised scope; they remain working drafts.
