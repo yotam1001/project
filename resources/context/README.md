@@ -45,6 +45,6 @@ The user requested a redesigned Hebrew proposal in native Google Docs, based on 
 
 The user reports having already checked home-PC hardware suitability for Clef-Flash Q8_0; accept that report for planning rather than repeatedly requesting a hardware check. Project-specific image evaluation and integration tests remain future work. Camera/controller compliance remains unknown pending the user’s supervisor check.
 
-The latest proposal uses the user-supplied `yotam-hebrew-writing` guidance, saved in `skills/yotam-hebrew-writing/`. Its referenced style evidence files were not included. The editable block diagram is the **תרשים מלבנים: הצעת הפרויקט** page on https://www.tldraw.com/f/4aOaHZDyKxk2AseGkkgxy. The original prototype page remains historical. Exported diagram assets are in `resources/diagrams/`.
+The latest proposal uses the user-supplied `yotam-hebrew-writing` guidance, saved in `skills/yotam-hebrew-writing/`. Its referenced style evidence files were not included. The user explicitly selected the original **Page 1** diagram on https://www.tldraw.com/f/4aOaHZDyKxk2AseGkkgxy for the Google Doc. Its original Raspberry Pi and simulated-cleaning labels remain, with a caption distinguishing it from the current project plan. The separate Hebrew board page is not used in the proposal. Exported assets are in `resources/diagrams/`.
 
 Editable proposal: https://docs.google.com/document/d/1fzNJpmtbakEgXjv7uT-z_8NCtRAehNbJFDoFE5lqjn0
