@@ -8,7 +8,7 @@ A pair project, 5 units, in high-school Electronics and Computers Engineering. C
 - Sensor, encoder, and camera data are sent to a laptop for navigation, mapping, recording, and AI-service integration.
 - A phone interface displays the map, rover state, captured images, and hazard flags.
 - Mapping is planar for now: no 3D reconstruction, elevation mapping, or measurement of vertical drops. The horizontal-distance sensing method is still to be selected.
-- When a suspected hazard is identified, save imagery and request an AI assessment. The exact model/provider is unresolved; its spoken name was ambiguous.
+- When a suspected hazard is identified, save imagery and request an AI assessment. Preferred deployment: a locally hosted image-capable model on the user’s home PC, kept running when needed. The model choice is tentative and its exact identity remains unverified; Q8_0 describes quantization rather than uniquely identifying a model.
 - AI can flag possible hazards or return uncertainty; it cannot certify a cave or route as safe for people.
 - Cleaning hardware is outside the active scope. The previous cleaning concept is preserved in the archive.
 

@@ -32,6 +32,8 @@ First maps will drift. Evaluate against a known arena before committing to full 
 
 Define observable hazard categories with the supervisor: for example a blocked passage, a narrow opening, or a visually suspicious obstacle. Trigger capture from sensor events, operator marking, or a later validated visual detector; the trigger itself is not yet implemented. Retain a short clip or still, timestamp, estimated location, trigger reason, and model/version.
 
+Preferred AI deployment is local inference on the user’s home PC, kept running when needed. The host may differ from the control laptop; select an authenticated network connection and verify model image support, memory, and latency before committing. The exact candidate model is unverified; Q8_0 is a quantization designation, not a complete model identity. No runtime, downloads, or network service have been configured.
+
 Send selected imagery to the chosen AI service. Store its advisory result, evidence/reasoning, uncertainty, and request outcome. Display possible hazard, no hazard detected, or unknown. On timeout, missing imagery, or model failure, show unknown/pending. Navigation and local stop behavior do not wait for AI. Evaluate missed hazards and false alarms on controlled labelled scenes. The ambiguous spoken model name remains unresolved.
 
 ## Build milestones and validation
@@ -45,3 +47,5 @@ Send selected imagery to the chosen AI service. Store its advisory result, evide
 7. Integrated repeatable demonstration, physical measurements, photos/video, and project book.
 
 Define numeric targets after hardware selection: collision count, stop distance, pose/map error, trial duration, connection-loss stop delay, capture completeness, and hazard-detection errors. No targets or experimental results have yet been confirmed.
+
+Controller compliance remains unknown pending the user’s supervisor check next week.

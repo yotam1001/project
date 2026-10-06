@@ -30,3 +30,11 @@ Budget and equipment; camera hardware/processor; horizontal range sensor and pla
 ## Historical sources
 
 Four originals and extracted texts are retained and indexed in `../sources.json`. The two template uploads are identical. Historical cleaning notes, generator, and outputs are preserved under `../archive/cleaning-concept-2026-10-05/`. They do not override this current context.
+
+## Follow-up — local AI hosting preference, 6 October 2026
+
+The user prefers to run the image-analysis model locally on their home PC and can leave the PC running when needed. This may be a separate host from the laptop controlling the rover; network access and machine roles are not finalized. The spoken candidate model name remains ambiguous. Q8_0 alone identifies a quantization format, not the model, its size, or its image-input capability. Do not record the candidate as a confirmed Cloudflare product or assume successful local execution before verifying the exact model and PC hardware.
+
+Captured images should be associated with suspected hazard locations on the planar map. The goal is to identify visible hazard cues and display advisory flags, with uncertainty and human review. Images cannot establish structural stability, breathable air, or absence of hidden hazards.
+
+The camera/ESP two-controller and independent-subsystem requirement remains explicitly unknown. The user intends to ask about it next week; do not treat it as resolved.
