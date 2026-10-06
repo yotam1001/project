@@ -1,53 +1,35 @@
-# Vacuuming and floor-washing robot project
+# Rescue-inspired exploration rover
 
-High-school Electronics and Computers Engineering project: a **pair project, 5 units**, inspired by Dreame and similar cleaning robots.
+A pair project, 5 units, in high-school Electronics and Computers Engineering. Current direction confirmed on 6 October 2026: an autonomous rover that explores a controlled, cave-like test area, produces an initial two-dimensional map, and captures suspected hazards for advisory AI analysis.
+
+## Current scope
+
+- Autonomous driving, obstacle avoidance, and first-stage mapping are the initial milestone.
+- Sensor, encoder, and camera data are sent to a laptop for navigation, mapping, recording, and AI-service integration.
+- A phone interface displays the map, rover state, captured images, and hazard flags.
+- Mapping is planar for now: no 3D reconstruction, elevation mapping, or measurement of vertical drops. The horizontal-distance sensing method is still to be selected.
+- When a suspected hazard is identified, save imagery and request an AI assessment. The exact model/provider is unresolved; its spoken name was ambiguous.
+- AI can flag possible hazards or return uncertainty; it cannot certify a cave or route as safe for people.
+- Cleaning hardware is outside the active scope. The previous cleaning concept is preserved in the archive.
 
 ## Start here
 
-- [Proposal draft — PDF](resources/proposal/robot-project-proposal-draft.pdf)
-- [Proposal draft — editable Word document](resources/proposal/robot-project-proposal-draft.docx)
-- [Work plan](resources/context/proposal-plan.md)
-- [Project context and requirements](resources/context/README.md)
-- [Earlier working draft](resources/context/proposal-working-draft.md)
+- [Current project context and requirements](resources/context/README.md)
+- [Engineering scope and algorithm plan](resources/context/engineering-plan.md)
+- [Proposal work plan](resources/context/proposal-plan.md)
+- [Current proposal source](resources/context/proposal-working-draft.md)
+- [Proposal PDF](resources/proposal/robot-project-proposal-draft.pdf)
+- [Editable proposal](resources/proposal/robot-project-proposal-draft.docx)
 - [Functional block diagram](resources/proposal/robot-block-diagram.png)
 
-The proposal is a working draft. Hardware choices, budget, test environment, commercial-product research, and the optional decision model still need to be finalized. The deadline given is around the 15th **for the proposal only**; the full date has not been confirmed.
+This is a planning repository, not implemented robot firmware. Hardware, budget, acceptance thresholds, AI model, and supervisor approval are pending. The camera only represents a second controller if it has an independent processor and functional subsystem; an ordinary camera sensor alone does not. School acceptance of the controller arrangement remains unresolved.
 
-## Resource folders
+## Sources and history
 
-| Folder | Contents |
-| --- | --- |
-| `resources/originals/` | All four original uploaded documents, unchanged |
-| `resources/extracted-text/` | Searchable text extracted from the documents |
-| `resources/context/` | Requirements, project decisions, work plan, and working notes |
-| `resources/proposal/` | Word/PDF draft, block diagram, previews, and generation script |
+Original school references remain unchanged in `resources/originals/`; searchable extracts are in `resources/extracted-text/`. The [source manifest](resources/sources.json) records their checksums. The current-year circular is תשפ״ז; the shorter criteria document is from תשפ״ו. The [earlier cleaning concept](resources/archive/cleaning-concept-2026-10-05/README.md) is historical and is not the current project scope.
 
-[Source manifest](resources/sources.json) records relative paths, file sizes, and checksums. The two uploaded proposal templates are identical; both are retained.
+The around-the-15th deadline refers to the proposal only; its full date remains unconfirmed. The circular specifies submission to the examiner by 30 October of the school year.
 
-The current-year Ministry circular is for תשפ״ז; the shorter criteria document is for תשפ״ו. Document guidelines are project references and are distinct from the user's requests. The newer circular also requires a component list and an explanation of the block diagram.
+## Access and regeneration
 
-## Access from another computer
-
-Open this repository in GitHub to view or download individual files, or choose **Code → Download ZIP** to download all resources. To work with Git:
-
-```sh
-git clone https://github.com/yotam1001/project.git
-cd project
-```
-
-## Regenerate the draft
-
-Use Python 3 and install the dependencies in `resources/proposal/requirements.txt`. The script uses the bundled original template and writes outputs beside itself:
-
-```sh
-python -m pip install -r resources/proposal/requirements.txt
-python resources/proposal/build_proposal.py
-```
-
-The diagram requires DejaVu Sans at `/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf` and Pillow with right-to-left text rendering support. On another operating system, update that font path to an installed font supporting Hebrew. To export the Word file to PDF, use Word or LibreOffice. For LibreOffice:
-
-```sh
-soffice --headless --convert-to pdf --outdir resources/proposal resources/proposal/robot-project-proposal-draft.docx
-```
-
-Generated PDF and Word files are already included; regeneration is optional.
+Open this repository on GitHub, download ZIP, or clone it on another computer. Install `resources/proposal/requirements.txt`, then run `python resources/proposal/build_proposal.py`. The generator reads the current Hebrew Markdown proposal and creates the Word document and diagram. Export the Word document to PDF with Word or LibreOffice. Hebrew diagram rendering uses DejaVu Sans and Pillow with RTL support; update the font path if needed on another OS.

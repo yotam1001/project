@@ -1,18 +1,12 @@
-# תוכנית להכנת הצעת הפרויקט
+# Proposal work plan — updated 6 October 2026
 
-יעד שהמשתמש ציין: הגשה סביב ה־15. החודש לא נאמר; לצורך תכנון בלבד נניח 15 באוקטובר 2026, עד לאישור. זהו מועד מקומי שיש להתייחס אליו בנפרד ממועד 30 באוקטובר בחוזר.
+1. Confirm revised exploration-rover scope with the supervisor; pair project, 5 units already confirmed.
+2. Define a controlled planar arena and the first milestone: autonomous movement, avoidance, and initial mapping. Cleaning is excluded; AI image assessment is an additional goal.
+3. Settle two independently functional computing subsystems. Verify the camera has its own processor and that each subsystem meets the complete school requirements; sensor count is not controller count.
+4. Select motors/encoders, distance sensors, camera hardware, power supply, communication, laptop, and phone interface according to budget and available equipment.
+5. Research source-backed alternatives: teleoperated inspection, autonomous planar mapping, and existing exploration robots. No commercial survey has yet been verified.
+6. Select horizontal-distance measurement and basic algorithms. Define test metrics and error limits; leave full SLAM and real cave operation outside the first commitment.
+7. Specify hazard capture, event storage, and AI advisory output. Identify the intended AI provider/model rather than guessing its spoken name.
+8. Complete cover details, explained block diagram, component list, and proposal PDF. Review revised scope and acceptance criteria with the supervisor.
 
-1. הגדרת המסגרת: עבודה זוגית ו־5 יח״ל אושרו; יש להשלים מועד הגשה מלא, תקציב וציוד זמין.
-2. סגירת היקף אב־הטיפוס: סביבת ניקוי מוגדרת, שאיבה, שטיפה, תנועה, זיהוי מכשולים וממשק מרחוק. מיפוי, תחנת עגינה, טעינה אוטומטית ומודל החלטות הם אפשרויות לבדיקה; לא התחייבויות בשלב זה.
-3. סקר קצר של פתרונות קיימים וחלופיים, עם מקורות ותיאור התרומה הלימודית של הפרויקט.
-4. בדיקת היתכנות: בחירת בקרים, חיישנים, מנועים, שאיבה, מנגנון מים, אספקת חשמל ושני פרוטוקולים; התאמה לדרישות עבודה אישית או זוגית.
-5. כתיבת התקציר ותיאור הצורך במבנה התבנית; הכנת תרשים מלבני מוסבר ורשימת רכיבים.
-6. בדיקה עם המנחה: רמת הפרויקט, היקף מעשי, דרישות IoT והיעדר התחייבויות שלא נבדקו.
-7. השלמת פרטי השער, הגהה, עיצוב וייצוא למסמך PDF אחד.
-
-אם 15 באוקטובר הוא המועד: 5–7 באוקטובר הגדרת היקף; 8–10 סקר והיתכנות; 11–12 טיוטה ותרשים; 13–14 בדיקת מנחה ותיקונים; 15 הגשה בידי המשתמש/בית הספר.
-
-נוצרה טיוטת עבודה ראשונית; היא אינה הצעה סופית מאושרת.
-
-## התקדמות
-נוצרו טיוטת Word ו־PDF עם דף שער, תקציר, צורך וסקר חלופות ראשוני, תפקיד המערכת, חלוקת עבודה, תרשים מוסבר ורשימת רכיבים מוצעת. הארכיטקטורה המוצעת היא שני בקרי ESP32: ניווט והנעה; שאיבה ושטיפה. דרוש להוסיף סקר דגמים ממקורות מאומתים ולסגור ציוד, תקציב וסביבת ניסוי.
+The deadline around the 15th is for the proposal only; its full date is unconfirmed. The current circular's examiner-submission deadline is 30 October of the school year. The generator and proposal outputs reflect the revised scope; they remain working drafts.
