@@ -1,6 +1,6 @@
 # Intended AI model — Cloudflare Clef-Flash, Q8_0
 
-Identified after the user’s spoken clarification on 6 October 2026. Intended deployment: locally on the user’s home PC; not installed or benchmarked yet. Camera/controller compliance remains unknown pending the user’s check next week.
+Identified after the user’s spoken clarification on 6 October 2026. Intended deployment: locally on the user’s home PC; not installed or benchmarked yet. ESP/Raspberry Pi subsystem compliance remains unknown pending the user’s check next week.
 
 ## Verified model behavior
 
@@ -15,3 +15,5 @@ Identified after the user’s spoken clarification on 6 October 2026. Intended d
 Use selected recorded frames as input and associate results with the event’s estimated map location. Define possible-hazard/no-hazard-detected/unknown options and separately assess image adequacy. Model probabilities need calibration on labelled test scenes; they are not demonstrated human-safety probabilities. Insufficient imagery, failure, or low-confidence results remain unknown. No output certifies structural stability, air quality, or cave safety.
 
 The user reports that home-PC hardware suitability has already been checked; accept this for planning. Confirm runtime integration and measure project-specific latency and false/missed hazard rates during implementation. Keep AI requests asynchronous so driving and local stopping remain independent. This note records a model choice, not a deployed service.
+
+The current plan has Raspberry Pi capture/store imagery and request local home-PC inference. The model does not run on the ESP or Pi; navigation and mapping run on Pi. The laptop is for operation and testing.

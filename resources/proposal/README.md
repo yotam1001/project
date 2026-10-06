@@ -2,12 +2,12 @@
 
 [Open the Hebrew Google Docs proposal](https://docs.google.com/document/d/1fzNJpmtbakEgXjv7uT-z_8NCtRAehNbJFDoFE5lqjn0)
 
-This is the current proposal for collaborative editing. The exact goal, problem statement, final title, and missing cover details are left for the team. It preserves the original template’s required sections and includes the current technical architecture, explained block diagram, and proposed component list. Five exported pages were visually checked after the latest native edits.
+This is the current proposal for collaborative editing. It retains the original template's sections, the team's editable goal/problem/cover fields, comparison table, system operation, algorithms, explained diagram, component list, tests and expanded AI section.
 
-The proposal applies the user-supplied [Hebrew writing skill](../../skills/yotam-hebrew-writing/SKILL.md). Its two referenced style evidence files are still missing. At the user's explicit request, the diagram now comes from the original **Page 1** on the [user's tldraw board](https://www.tldraw.com/f/4aOaHZDyKxk2AseGkkgxy), with its contents preserved. A caption distinguishes it from the current technical plan. The separate Hebrew board page remains available but is not used in the proposal. Exported assets and rendering notes are in [resources/diagrams](../diagrams/README.md).
+The current plan includes ESP for local motion control and onboard Raspberry Pi for capture, mapping, navigation and the backend. The laptop is for operation/testing; the home PC hosts Clef-Flash Q8_0. Pi hardware selection and complete school subsystem acceptance remain open.
 
-Repository Word/PDF drafts predate this redesigned editable document. Do not overwrite edits in Google Docs by rerunning the earlier repository generator. Original templates and school references remain unchanged.
+The current diagram comes from updated **Page 1** of the [user's tldraw board](https://www.tldraw.com/f/4aOaHZDyKxk2AseGkkgxy). It uses the handwriting font, includes camera and home-PC AI, removes cleaning, and marks optional sensors. Export assets are in [diagrams](../diagrams/README.md). Component quantities and additional sensor explanations agree with the diagram.
 
-Two matching navy/teal [concept illustrations](../design/README.md) now appear on the cover and after the abstract. They show the planned rover, offboard processing, planar mapping and image-event review. The original tldraw diagram remains. The five-page layout was checked again after these design additions.
+The proposal uses the supplied [Hebrew writing skill](../../skills/yotam-hebrew-writing/SKILL.md). Its referenced style evidence files were not supplied. Two conceptual navy/teal illustrations remain, as illustrations rather than final hardware specifications.
 
-The latest AI expansion adds a sixth page, with model/runtime sources, image capture and map association, predefined model decisions, background requests and failure handling, and an evaluation plan. The [review notes](../context/proposal-review-2026-10-06.md) record other filled gaps and remaining team decisions. All six exported pages were visually checked. The original diagram remains by explicit user choice; its difference from the current architecture is noted in the proposal.
+Repository Word/PDF drafts predate the editable Google Doc. Do not overwrite live edits by rerunning the older generator. Original templates and school references remain unchanged. A PDF was exported only for visual QA; Google Docs remains the deliverable.

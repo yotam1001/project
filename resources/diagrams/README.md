@@ -1,18 +1,15 @@
-# Editable proposal block diagram
+# Current editable block diagram
 
 [Open the tldraw board](https://www.tldraw.com/f/4aOaHZDyKxk2AseGkkgxy)
 
-The Google Docs proposal now uses the original **Page 1** (`page:page`), exactly as requested by the user. Its Raspberry Pi and simulated-cleaning labels are preserved. The proposal caption distinguishes that original diagram from the current laptop/camera plan; inserting it does not reinstate cleaning as the project goal.
+The proposal uses updated **Page 1** (`page:page`). The current architecture is ESP motion control and stopping, onboard Raspberry Pi capture/mapping/navigation/backend, browser access from phone/laptop, and home-PC Clef-Flash Q8_0 analysis. Cleaning has been removed. Right ToF, LiDAR and additional protection/monitoring sensors are marked optional.
 
-The separate **תרשים מלבנים: הצעת הפרויקט** (`page:hebrew-proposal-rover`) page remains on the board but is not the diagram used in the Google Doc.
+All text-bearing shapes on Page 1 use tldraw's handwriting font (`draw`). The separate Hebrew page is an earlier reference and is not used in the proposal.
 
-The current page shows the phone, laptop, home-PC image analysis, ESP motion controller, capture subsystem, sensors, motor drivers, camera, and power supply. Capture hardware and the two-controller compliance question remain unresolved. Arrows show data and commands; the power block is separate from the data flow.
+- `tldraw-current-pi-source.svg`: current live board export.
+- `tldraw-current-pi-render.svg`: visible-label rendering repair, with embedded Shantell Sans informal handwriting for reliable export.
+- `tldraw-current-pi.png`: current diagram inserted in Google Docs.
+- `tldraw-original-page-1-*`: historical pre-update exports.
+- `tldraw-proposal-*`: earlier Hebrew-page exports.
 
-- `tldraw-proposal-source.svg`: original SVG export from the current board page.
-- `tldraw-proposal-render.svg`: export repaired for rendering, with visible text, Arial fallback, and no text outline shadow.
-- `tldraw-proposal.png`: previously inserted Hebrew diagram, now replaced in the Google Doc.
-- `tldraw-original-page-1-source.svg`: original Page 1 SVG export.
-- `tldraw-original-page-1-render.svg`: visible-text export repair with outline shadows removed.
-- `tldraw-original-page-1.png`: original Page 1 diagram now inserted in the Google Doc.
-
-The tldraw exporter emitted hidden rich-text labels and an empty embedded font. The render repair changes presentation only; node text, rectangles, positions and arrow relationships come from the board. Regenerate these assets from the live board after diagram edits.
+The exporter emitted hidden labels and empty font sources. Rendering repairs preserve the board's shapes, labels, geometry and arrow connections. The repair embeds the OFL-licensed Shantell Sans font from Google Fonts, using its informal axis. Regenerate exports after editing the live board.

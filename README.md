@@ -5,7 +5,7 @@ A pair project, 5 units, in high-school Electronics and Computers Engineering. C
 ## Current scope
 
 - Autonomous driving, obstacle avoidance, and first-stage mapping are the initial milestone.
-- Sensor, encoder, and camera data are sent to a laptop for navigation, mapping, recording, and AI-service integration.
+- Current plan: ESP controls motors and local stopping; onboard Raspberry Pi handles camera capture, pose estimation, mapping, navigation, event storage, and the web interface. A laptop is used for operation, development and testing; the home PC hosts AI. The Raspberry Pi model and measured processing rate remain to be selected.
 - A phone interface displays the map, rover state, captured images, and hazard flags.
 - Mapping is planar for now: no 3D reconstruction, elevation mapping, or measurement of vertical drops. The horizontal-distance sensing method is still to be selected.
 - When a suspected hazard is identified, save imagery and request an AI assessment. Preferred deployment: a locally hosted image-capable model on the user’s home PC, kept running when needed. The intended model is Cloudflare Clef-Flash, Q8_0, identified from its published model documentation. The user has checked home-PC hardware suitability; runtime integration, latency and project-image evaluation remain future work. See [AI model notes](resources/context/ai-model.md).
@@ -27,7 +27,7 @@ The latest Hebrew proposal is an editable [Google Doc](https://docs.google.com/d
 - [Editable tldraw block diagram and exported assets](resources/diagrams/README.md)
 - [User supplied Hebrew writing skill](skills/yotam-hebrew-writing/README.md)
 
-This is a planning repository, not implemented robot firmware. Hardware, budget, acceptance thresholds, AI runtime/hardware validation, and supervisor approval are pending. The camera only represents a second controller if it has an independent processor and functional subsystem; an ordinary camera sensor alone does not. School acceptance of the controller arrangement remains unresolved.
+This is a planning repository, not implemented robot firmware. Hardware models, budget, acceptance thresholds, AI runtime integration and supervisor approval are pending. ESP and Raspberry Pi are the planned processing units. School acceptance still requires independently functioning subsystems and each subsystem’s complete input, display, sensors/actuators and communication requirements.
 
 ## Sources and history
 

@@ -9,10 +9,12 @@ The prototype does not certify structural stability, air quality, human passage 
 ## Proposed computation and communication
 
 - ESP motion controller: encoder acquisition, PI/PID wheel-speed control, immediate stop checks, and command timeout.
-- Camera subsystem: capture and stream imagery; processor-equipped hardware and independent function are pending selection.
-- Laptop: time alignment, pose estimation, map updates, navigation decisions, event storage, and AI requests.
+- Onboard Raspberry Pi: camera capture, time alignment, pose estimation, map updates, navigation decisions, event storage, web backend and asynchronous AI requests. This is the current plan; exact Pi model and processing performance are unverified.
+- Camera: one camera connected to Raspberry Pi.
+- Laptop: operator browser, development and testing.
+- Home PC: local Clef-Flash Q8_0 image inference. The user has checked hardware suitability.
 - Phone: map, pose/path, status, captured events, AI decision probabilities/uncertainty, start/stop and manual control.
-- Wi-Fi transports data and commands; local stop behavior must not depend on the laptop or cloud. Use timestamps, sequence numbers, bounded queues, command expiry, and a heartbeat. Stop motion on lost/stale commands or invalid critical sensing.
+- ESP–Pi uses UART over USB serial in the initial plan; suitable ESP sensors use I2C. Phone/laptop–Pi uses Wi-Fi and WebSocket. A separate authenticated internet connection/service is still to be selected. Local stop behavior must not depend on Raspberry Pi, the laptop or AI. Use timestamps, sequence numbers, bounded queues, command expiry, and a heartbeat. Stop motion on lost/stale commands or invalid critical sensing.
 - At least one controller exchanges status/data with an internet service for the IoT requirement. Phone access over a local network alone is not proof of internet communication.
 
 ## Candidate algorithms — recommendations, not finalized decisions
@@ -32,7 +34,7 @@ First maps will drift. Evaluate against a known arena before committing to full 
 
 Define observable hazard categories with the supervisor: for example a blocked passage, a narrow opening, or a visually suspicious obstacle. Trigger capture from sensor events, operator marking, or a later validated visual detector; the trigger itself is not yet implemented. Retain a short clip or still, timestamp, estimated location, trigger reason, and model/version.
 
-Preferred AI deployment is local inference on the user’s home PC, kept running when needed. The host may differ from the control laptop; select an authenticated network connection and verify model image support, memory, and latency before committing. The intended model is Cloudflare Clef-Flash, Q8_0, with image-input and structured decision support verified in published documentation. Runtime compatibility and PC performance still need testing; see ai-model.md. No runtime, downloads, or network service have been configured.
+Preferred AI deployment is local inference on the user’s home PC, kept running when needed. The inference host is separate from the onboard Raspberry Pi and operator laptop; select an authenticated network connection and evaluate image-analysis latency during integration. The intended model is Cloudflare Clef-Flash, Q8_0, with image-input and structured decision support verified in published documentation. Runtime compatibility and PC performance still need testing; see ai-model.md. No runtime, downloads, or network service have been configured.
 
 Send selected imagery to the chosen AI service. Store its advisory choices, model probabilities, input context, and request outcome. Clef-Flash does not generate free-form explanations; visible evidence annotations require a separate, explicitly designed method. Treat probabilities as model scores until calibration is evaluated. Display possible hazard, no hazard detected, or unknown. On timeout, missing imagery, or model failure, show unknown/pending. Navigation and local stop behavior do not wait for AI. Evaluate missed hazards and false alarms on controlled labelled scenes. The intended model is now identified; local execution is still untested.
 
@@ -49,3 +51,7 @@ Send selected imagery to the chosen AI service. Store its advisory choices, mode
 Define numeric targets after hardware selection: collision count, stop distance, pose/map error, trial duration, connection-loss stop delay, capture completeness, and hazard-detection errors. No targets or experimental results have yet been confirmed.
 
 Controller compliance remains unknown pending the user’s supervisor check next week.
+
+## Diagram and component consistency
+
+The active Page 1 tldraw diagram now matches ESP + onboard Raspberry Pi + home-PC AI. Two front/left ToF sensors, two encoder motors, one IMU and one camera are planned. Right ToF, 2D LiDAR, bumper/drop-stop sensing, motor-current and battery-voltage monitoring are optional, with quantities/models to be selected. Optional drop-stop sensing is a local protection feature, not vertical terrain mapping. Battery protection, charger and regulated supplies support the electronics. Controller compliance remains open for supervisor review.

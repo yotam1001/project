@@ -6,15 +6,15 @@ The final objective is a functioning pair project at the 5-unit level (examinati
 
 The user wants autonomous driving and first signs of mapping first. The rover is intended to explore narrow, cave-like passages and show a scan/map on a phone. The current prototype will address a controlled planar environment, without 3D reconstruction or vertical terrain/drop assessment. A real cave deployment is not a demonstrated capability.
 
-Data will be streamed to a laptop rather than relying on an onboard Raspberry Pi. The laptop performs higher-level processing. The robot retains local motor control and immediate stopping behavior.
+The current plan uses onboard Raspberry Pi for capture, mapping, navigation and the backend. The laptop provides operation, development and testing. ESP retains local motor control and immediate stopping behavior.
 
 Additional project goal: record imagery whenever a suspected hazard is identified, preserve it, and send it to an AI service for advisory hazard assessment. The intended model has now been identified as Cloudflare Clef-Flash, Q8_0; see ai-model.md for verified sources and remaining runtime checks. Model outputs are possible-hazard, no-hazard-detected, or unknown assessments, not human safety clearance. Failure to detect a hazard does not establish safety.
 
 ## Architecture and compliance status
 
-The user's intended arrangement treats the camera system and ESP controller as two computing subsystems. This is an intended design, not a verified statement of school compliance. A camera module without its own processor is a sensor, not a controller. Select a processor-equipped camera subsystem or another controller as needed and confirm the arrangement with the supervisor.
+The current plan uses ESP for motion control and Raspberry Pi for camera capture, mapping, navigation and the backend. The operator laptop and phone access the interface; the home PC hosts AI. A camera is a sensor attached to Pi, not an additional controller.
 
-Proposed separation: ESP motion/encoder subsystem; processor-equipped camera/capture subsystem. Each needs independent test operation, sensor inputs, actuators/outputs, user input/display, and at least two communication protocols as required by the school. Camera capture alone may not meet the complete individual-subproject requirements. The laptop and phone support both systems. Actual operational inter-subsystem communication and at least one controller's internet data exchange must be demonstrated.
+School compliance remains unknown pending supervisor review. Each subsystem needs independent test operation, sensor inputs, actuators/outputs, user input/display and at least two accepted communication protocols. Actual inter-subsystem communication and at least one controller's internet exchange must be demonstrated. The plan does not yet certify those complete requirements.
 
 ## Current-year school references
 
@@ -25,7 +25,7 @@ Proposed separation: ESP motion/encoder subsystem; processor-equipped camera/cap
 
 ## Unresolved details
 
-Budget and equipment; camera hardware/processor; horizontal range sensor and placement; Wi-Fi operating conditions; AI runtime integration and image evaluation; automatic hazard triggers and dataset; internet service; controller compliance; test arena and numerical acceptance targets; student/school details; full proposal deadline. The deadline around the 15th is for the proposal, not completion of the robot.
+Budget and equipment; Raspberry Pi model and camera hardware; horizontal range sensor and placement; Wi-Fi operating conditions; AI runtime integration and image evaluation; automatic hazard triggers and dataset; internet service; controller compliance; test arena and numerical acceptance targets; student/school details; full proposal deadline. The deadline around the 15th is for the proposal, not completion of the robot.
 
 ## Historical sources
 
@@ -33,18 +33,22 @@ Four originals and extracted texts are retained and indexed in `../sources.json`
 
 ## Follow-up — local AI hosting preference, 6 October 2026
 
-The user prefers to run the image-analysis model locally on their home PC and can leave the PC running when needed. This may be a separate host from the laptop controlling the rover; network access and machine roles are not finalized. Subsequent clarification and source verification identified Cloudflare Clef-Flash, Q8_0. It supports image input and typed decisions. Successful local execution and latency on the user’s PC remain unverified; see ai-model.md.
+The user prefers to run the image-analysis model locally on their home PC and can leave the PC running when needed. The home PC is separate from the onboard Raspberry Pi and operator laptop; authenticated network access is still to be selected. Subsequent clarification and source verification identified Cloudflare Clef-Flash, Q8_0. It supports image input and typed decisions. Successful local execution and latency on the user’s PC remain unverified; see ai-model.md.
 
 Captured images should be associated with suspected hazard locations on the planar map. The goal is to identify visible hazard cues and display advisory flags, with uncertainty and human review. Images cannot establish structural stability, breathable air, or absence of hidden hazards.
 
-The camera/ESP two-controller and independent-subsystem requirement remains explicitly unknown. The user intends to ask about it next week; do not treat it as resolved.
+Acceptance of the planned ESP/Raspberry Pi independent-subsystem arrangement remains explicitly unknown. The user intends to ask about it next week; do not treat it as resolved.
 
 ## Latest proposal preferences and status
 
 The user requested a redesigned Hebrew proposal in native Google Docs, based on the original supplied DOCX template. The exact goal and problem statement must remain explicit editable spaces for the team, because the application may change. Do not infer the final application from the rescue-inspired example. The Google Doc is the latest proposal; earlier Word/PDF drafts are reference versions.
 
-The user reports having already checked home-PC hardware suitability for Clef-Flash Q8_0; accept that report for planning rather than repeatedly requesting a hardware check. Project-specific image evaluation and integration tests remain future work. Camera/controller compliance remains unknown pending the user’s supervisor check.
+The user reports having already checked home-PC hardware suitability for Clef-Flash Q8_0; accept that report for planning rather than repeatedly requesting a hardware check. Project-specific image evaluation and integration tests remain future work. ESP/Raspberry Pi subsystem compliance remains unknown pending the user’s supervisor check.
 
-The latest proposal uses the user-supplied `yotam-hebrew-writing` guidance, saved in `skills/yotam-hebrew-writing/`. Its referenced style evidence files were not included. The user explicitly selected the original **Page 1** diagram on https://www.tldraw.com/f/4aOaHZDyKxk2AseGkkgxy for the Google Doc. Its original Raspberry Pi and simulated-cleaning labels remain, with a caption distinguishing it from the current project plan. The separate Hebrew board page is not used in the proposal. Exported assets are in `resources/diagrams/`.
+The latest proposal uses the user-supplied `yotam-hebrew-writing` guidance, saved in `skills/yotam-hebrew-writing/`. Its referenced style evidence files were not included. The user explicitly selected the original **Page 1** diagram on https://www.tldraw.com/f/4aOaHZDyKxk2AseGkkgxy for the Google Doc. Page 1 has now been updated to the current ESP/Raspberry Pi plan, with a camera and home-PC AI, optional sensors marked, and cleaning removed. Its labels use the tldraw handwriting font. The separate Hebrew board page is not used in the proposal. Exported assets are in `resources/diagrams/`.
 
 Editable proposal: https://docs.google.com/document/d/1fzNJpmtbakEgXjv7uT-z_8NCtRAehNbJFDoFE5lqjn0
+
+## Current computation plan
+
+Raspberry Pi is now explicitly part of the plan, mounted onboard for capture, mapping, navigation and the web backend. ESP owns motor feedback and local stopping; the laptop is used for operation and testing; the home PC hosts Clef-Flash Q8_0. Model selection, measured Pi performance and complete school subsystem compliance are not yet finalized.

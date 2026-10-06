@@ -8,7 +8,7 @@ Other gaps filled: WiFi data/command transport with timestamps and stale-command
 
 Remaining team/supervisor decisions: exact goal and need, final title and cover details, two-controller/independent-subsystem compliance, hardware models and budget, protocol allocation, internet service, capture triggers/category definitions, test arena, numerical acceptance targets and full proposal deadline. Home-PC hardware suitability has already been checked by the user; project-specific integration and performance remain future implementation work.
 
-The original tldraw Page 1 diagram remains exactly as requested. It still shows Raspberry Pi and simulated cleaning rather than the laptop/camera/AI architecture described by the current text. That mismatch is explicitly identified in the proposal's completion notes; the board has not been changed to resolve it. Final school submission also requires one PDF, while Google Docs remains the editable working format.
+At the initial audit, the original tldraw Page 1 showed Raspberry Pi and simulated cleaning rather than the then-current laptop architecture. This finding is resolved by the later Raspberry Pi update recorded below. Final school submission also requires one PDF, while Google Docs remains the editable working format.
 
 All six native-exported pages were rasterized and visually reviewed after the changes. The abstract and need sections still fit on their existing page, and the expanded AI section occupies the sixth page. No prototype operation or AI accuracy is claimed as tested.
 
@@ -19,3 +19,11 @@ Sources:
 - https://emanual.robotis.com/docs/en/platform/turtlebot3/basic_operation/
 - https://emanual.robotis.com/docs/en/platform/turtlebot3/slam/
 - Original proposal DOCX and תשפ״ז circular in `resources/originals/`.
+
+## Resolution: current Raspberry Pi plan
+
+The user requested fixing the audit findings and adding Raspberry Pi to the current plan. The Google Doc now assigns ESP local motor control/stopping, Pi onboard capture/mapping/navigation/backend, laptop operation/testing and home-PC AI. Page 1 in tldraw was updated, removing simulated cleaning, adding camera/AI, marking optional sensors and restoring handwriting labels. Its new export is inserted in the proposal. Diagram/component explanations, per-computer quantities, communication planning and final-PDF submission requirement were corrected.
+
+The exact goal/problem and missing school/person fields remain intentionally open. Pi model, camera/sensor models, budget, numeric test targets, internet endpoint and supervisor approval of the full two-subsystem requirements remain unresolved; processor count alone is not acceptance.
+
+After formatting repair, all six pages of the final native PDF export were visually checked. The abstract/need remain within their template page limits. The block diagram, explanation table, component list and AI section are readable. The document font stays Arial; the handwriting request applied to tldraw labels.
