@@ -1,6 +1,6 @@
-# Rescue-inspired exploration rover
+# Exploration rover — working project
 
-A pair project, 5 units, in high-school Electronics and Computers Engineering. Current direction confirmed on 6 October 2026: an autonomous rover that explores a controlled, cave-like test area, produces an initial two-dimensional map, and captures suspected hazards for advisory AI analysis.
+A pair project, 5 units, in high-school Electronics and Computers Engineering. Current technical direction: autonomous driving, initial two-dimensional mapping, and image capture for advisory AI analysis. The team will write the exact application goal; a rescue-inspired inspection scenario remains a possible use case.
 
 ## Current scope
 
@@ -12,14 +12,18 @@ A pair project, 5 units, in high-school Electronics and Computers Engineering. C
 - AI can flag possible hazards or return uncertainty; it cannot certify a cave or route as safe for people.
 - Cleaning hardware is outside the active scope. The previous cleaning concept is preserved in the archive.
 
+## Editable proposal
+
+The latest Hebrew proposal is an editable [Google Doc](https://docs.google.com/document/d/1fzNJpmtbakEgXjv7uT-z_8NCtRAehNbJFDoFE5lqjn0). It follows the original school template, uses a redesigned RTL layout and block diagram, and leaves the exact goal and problem statement for the team to write. Earlier repository Word/PDF drafts remain reference versions.
+
 ## Start here
 
 - [Current project context and requirements](resources/context/README.md)
 - [Engineering scope and algorithm plan](resources/context/engineering-plan.md)
 - [Proposal work plan](resources/context/proposal-plan.md)
-- [Current proposal source](resources/context/proposal-working-draft.md)
-- [Proposal PDF](resources/proposal/robot-project-proposal-draft.pdf)
-- [Editable proposal](resources/proposal/robot-project-proposal-draft.docx)
+- [Earlier technical proposal source](resources/context/proposal-working-draft.md)
+- [Earlier proposal PDF](resources/proposal/robot-project-proposal-draft.pdf)
+- [Earlier Word proposal](resources/proposal/robot-project-proposal-draft.docx)
 - [Functional block diagram](resources/proposal/robot-block-diagram.png)
 
 This is a planning repository, not implemented robot firmware. Hardware, budget, acceptance thresholds, AI runtime/hardware validation, and supervisor approval are pending. The camera only represents a second controller if it has an independent processor and functional subsystem; an ordinary camera sensor alone does not. School acceptance of the controller arrangement remains unresolved.

@@ -38,3 +38,11 @@ The user prefers to run the image-analysis model locally on their home PC and ca
 Captured images should be associated with suspected hazard locations on the planar map. The goal is to identify visible hazard cues and display advisory flags, with uncertainty and human review. Images cannot establish structural stability, breathable air, or absence of hidden hazards.
 
 The camera/ESP two-controller and independent-subsystem requirement remains explicitly unknown. The user intends to ask about it next week; do not treat it as resolved.
+
+## Latest proposal preferences and status
+
+The user requested a redesigned Hebrew proposal in native Google Docs, based on the original supplied DOCX template. The exact goal and problem statement must remain explicit editable spaces for the team, because the application may change. Do not infer the final application from the rescue-inspired example. The Google Doc is the latest proposal; earlier Word/PDF drafts are reference versions.
+
+The user reports having already checked home-PC hardware suitability for Clef-Flash Q8_0; accept that report for planning rather than repeatedly requesting a hardware check. Project-specific image evaluation and integration tests remain future work. Camera/controller compliance remains unknown pending the user’s supervisor check.
+
+Editable proposal: https://docs.google.com/document/d/1fzNJpmtbakEgXjv7uT-z_8NCtRAehNbJFDoFE5lqjn0
