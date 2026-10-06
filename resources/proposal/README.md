@@ -9,3 +9,5 @@ The proposal applies the user-supplied [Hebrew writing skill](../../skills/yotam
 Repository Word/PDF drafts predate this redesigned editable document. Do not overwrite edits in Google Docs by rerunning the earlier repository generator. Original templates and school references remain unchanged.
 
 Two matching navy/teal [concept illustrations](../design/README.md) now appear on the cover and after the abstract. They show the planned rover, offboard processing, planar mapping and image-event review. The original tldraw diagram remains. The five-page layout was checked again after these design additions.
+
+The latest AI expansion adds a sixth page, with model/runtime sources, image capture and map association, predefined model decisions, background requests and failure handling, and an evaluation plan. The [review notes](../context/proposal-review-2026-10-06.md) record other filled gaps and remaining team decisions. All six exported pages were visually checked. The original diagram remains by explicit user choice; its difference from the current architecture is noted in the proposal.
