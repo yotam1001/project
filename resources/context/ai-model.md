@@ -16,4 +16,6 @@ Use selected recorded frames as input and associate results with the event’s e
 
 The user reports that home-PC hardware suitability has already been checked; accept this for planning. Confirm runtime integration and measure project-specific latency and false/missed hazard rates during implementation. Keep AI requests asynchronous so driving and local stopping remain independent. This note records a model choice, not a deployed service.
 
-The current plan has Raspberry Pi capture/store imagery and request local home-PC inference. The model does not run on the ESP or Pi; navigation and mapping run on Pi. The laptop is for operation and testing.
+The current plan has Raspberry Pi capture/store imagery and request local home-PC inference using images received from the separate ESP CAM S3 camera. The model does not run on the ESP or Pi; navigation and mapping run on Pi. The laptop is for operation and testing.
+
+Current live proposal plans authenticated HTTPS internet exchange from Pi to the home PC, with predefined blockage/obstacle/narrow-opening/image-adequacy questions. This remains planned integration, not a configured service.

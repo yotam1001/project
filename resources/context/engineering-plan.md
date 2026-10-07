@@ -10,11 +10,11 @@ The prototype does not certify structural stability, air quality, human passage 
 
 - ESP motion controller: encoder acquisition, PI/PID wheel-speed control, immediate stop checks, and command timeout.
 - Onboard Raspberry Pi: camera capture, time alignment, pose estimation, map updates, navigation decisions, event storage, web backend and asynchronous AI requests. This is the current plan; exact Pi model and processing performance are unverified.
-- Camera: one camera connected to Raspberry Pi.
+- Camera: one separate ESP CAM S3 unit sending images over WiFi to Raspberry Pi.
 - Laptop: operator browser, development and testing.
 - Home PC: local Clef-Flash Q8_0 image inference. The user has checked hardware suitability.
 - Phone: map, pose/path, status, captured events, AI decision probabilities/uncertainty, start/stop and manual control.
-- ESP–Pi uses UART over USB serial in the initial plan; suitable ESP sensors use I2C. Phone/laptop–Pi uses Wi-Fi and WebSocket. A separate authenticated internet connection/service is still to be selected. Local stop behavior must not depend on Raspberry Pi, the laptop or AI. Use timestamps, sequence numbers, bounded queues, command expiry, and a heartbeat. Stop motion on lost/stale commands or invalid critical sensing.
+- ESP–Pi uses UART over USB serial in the initial plan; suitable ESP sensors use I2C. Phone/laptop–Pi uses Wi-Fi and WebSocket. The current proposal plans authenticated HTTPS internet exchange between Pi and the home-PC AI service; deployment details remain to be implemented. Local stop behavior must not depend on Raspberry Pi, the laptop or AI. Use timestamps, sequence numbers, bounded queues, command expiry, and a heartbeat. Stop motion on lost/stale commands or invalid critical sensing.
 - At least one controller exchanges status/data with an internet service for the IoT requirement. Phone access over a local network alone is not proof of internet communication.
 
 ## Candidate algorithms — recommendations, not finalized decisions
@@ -24,7 +24,7 @@ The prototype does not certify structural stability, air quality, human passage 
 3. Differential-drive odometry for planar position and heading; optionally gyro fusion after measuring drift.
 4. Median or low-pass sensor filtering, with explicit treatment of invalid readings and data age.
 5. Reactive obstacle avoidance as the first autonomous behavior, with an independently enforced local stop distance.
-6. Occupancy grid: transform horizontal range observations using the estimated pose; mark observed free/occupied cells and retain unknown cells. A monocular image alone does not provide reliable metric range. Select ToF, LiDAR, another range method, or a calibrated vision approach before claiming metric mapping.
+6. Occupancy grid: transform horizontal range observations using the estimated pose; mark observed free/occupied cells and retain unknown cells. A monocular image alone does not provide reliable metric range. The current plan uses USB 2D LiDAR for planar range mapping, supplemented by left/right ToF for side clearance.
 7. A* path planning only after a usable map exists. Exploration/coverage planning is a separate later decision; obstacle avoidance alone does not ensure coverage.
 8. Progress and timeout checks to detect stalls or repeated blocked behavior.
 
@@ -48,10 +48,12 @@ Send selected imagery to the chosen AI service. Store its advisory choices, mode
 6. Event capture, playback, and advisory AI assessment; test ambiguous scenes and service failure.
 7. Integrated repeatable demonstration, physical measurements, photos/video, and project book.
 
-Define numeric targets after hardware selection: collision count, stop distance, pose/map error, trial duration, connection-loss stop delay, capture completeness, and hazard-detection errors. No targets or experimental results have yet been confirmed.
+Define numeric targets after hardware selection: collision count, stop distance, pose/map error, trial duration, connection-loss stop delay, capture completeness, and hazard-detection errors. The live proposal now sets planned targets of five collision-free trials, stopping within one second of command loss, and mean position error at most 30 cm in a small arena. No experimental results have been demonstrated.
 
 Controller compliance remains unknown pending the user’s supervisor check next week.
 
 ## Diagram and component consistency
 
-The active Page 1 tldraw diagram now matches ESP + onboard Raspberry Pi + home-PC AI. Two front/left ToF sensors, two encoder motors, one IMU and one camera are planned. Right ToF, 2D LiDAR, bumper/drop-stop sensing, motor-current and battery-voltage monitoring are optional, with quantities/models to be selected. Optional drop-stop sensing is a local protection feature, not vertical terrain mapping. Battery protection, charger and regulated supplies support the electronics. Controller compliance remains open for supervisor review.
+Current live proposal: one motion ESP, onboard Raspberry Pi, separate ESP CAM S3, one core USB 2D LiDAR, two side ToF sensors (left/right), two encoder motors, one IMU, two front/rear bumpers and four corner edge sensors. Motor-current and battery-voltage monitoring remain optional. The user-selected tldraw diagram is historical if its export predates this allocation; do not silently treat its older optional labels as current. Edge sensing is a stopping measure, not elevation mapping. School compliance remains open.
+
+The app shows initial 2D occupancy map/path, camera imagery, map-linked events, advisory model scores and pending/unknown status, start/stop and manual controls. The AI model does not steer the rover. Concept images use example data, not live telemetry.

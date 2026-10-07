@@ -1,13 +1,13 @@
-# Latest editable proposal
+# Current editable proposal and synchronized exports
 
 [Open the Hebrew Google Docs proposal](https://docs.google.com/document/d/1fzNJpmtbakEgXjv7uT-z_8NCtRAehNbJFDoFE5lqjn0)
 
-This is the current proposal for collaborative editing. It retains the original template's sections, the team's editable goal/problem/cover fields, comparison table, system operation, algorithms, explained diagram, component list, tests and expanded AI section.
+Google Docs remains authoritative. The Word/PDF files here are native exports updated on 7 October 2026, with the rover web app concept and corrected architecture diagram. They preserve the live cover, goal/problem, tables, algorithms, component allocation, tests and AI section.
 
-The current plan includes ESP for local motion control and onboard Raspberry Pi for capture, mapping, navigation and the backend. The laptop is for operation/testing; the home PC hosts Clef-Flash Q8_0. Pi hardware selection and complete school subsystem acceptance remain open.
+Architecture: motion ESP; onboard Raspberry Pi; separate ESP CAM S3; one core USB 2D LiDAR; left/right ToF, encoders, IMU, two bumpers and four edge sensors. Operator phone/laptop access the Pi web app. Home PC runs Clef-Flash Q8_0 for asynchronous advisory image analysis via planned authenticated HTTPS internet exchange. Hardware models, integration and school acceptance remain open.
 
-The current diagram comes from updated **Page 1** of the [user's tldraw board](https://www.tldraw.com/f/4aOaHZDyKxk2AseGkkgxy). It uses the handwriting font, includes camera and home-PC AI, removes cleaning, and marks optional sensors. Export assets are in [diagrams](../diagrams/README.md). Component quantities and additional sensor explanations agree with the diagram.
+[Web app concept](../design/webapp-rover-concept.png) depicts the initial planar map/path, camera frame, map-linked events, pending AI review, manual/autonomous controls and sensor status. Example data are labelled; no implemented behavior or safety clearance is implied.
 
-The proposal uses the supplied [Hebrew writing skill](../../skills/yotam-hebrew-writing/SKILL.md). Its referenced style evidence files were not supplied. Two conceptual navy/teal illustrations remain, as illustrations rather than final hardware specifications.
+[Current block diagram](../diagrams/current-proposal-block-diagram.png) matches the live written allocation. It replaces an embedded historical diagram that still mentioned simulated cleaning. Historical tldraw exports and the board are preserved separately; they are not the current architecture reference.
 
-Repository Word/PDF drafts predate the editable Google Doc. Do not overwrite live edits by rerunning the older generator. Original templates and school references remain unchanged. A PDF was exported only for visual QA; Google Docs remains the deliverable.
+The supplied [Hebrew writing skill](../../skills/yotam-hebrew-writing/SKILL.md) applies to captions and prose. Referenced style-evidence files were not supplied. The older generator is disabled so it cannot overwrite native exports with stale architecture. Export from Google Docs instead.

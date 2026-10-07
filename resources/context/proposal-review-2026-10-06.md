@@ -1,3 +1,5 @@
+> Historical review dated 6 October. Current live document and context README supersede unresolved-goal, camera and optional-sensor statements below.
+
 # Proposal review after AI expansion
 
 Reviewed the live Google Doc against the repository context, original proposal template, current-year school circular, and current model documentation. The editable Google Doc remains the authoritative proposal. User edits to component quantities were preserved.

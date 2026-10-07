@@ -1,10 +1,9 @@
-# Proposal illustrations
+# Rover proposal concept illustrations
 
-Two AI-generated concept illustrations were added to the editable Google Docs proposal on 6 October 2026:
+Current scope: exploration, initial 2D mapping, camera capture and advisory image assessment, not cleaning. Images are generated concept illustrations, not prototype photographs or verified test results.
 
-- `rover-cover-concept.png`: navy/teal rover, laptop, phone, and flat test arena, on the cover.
-- `driving-mapping-image-review.png`: autonomous movement, initial planar map, and captured-image review, after the abstract.
+- `webapp-rover-concept.png`: current web application concept, generated on 7 October 2026 from the live proposal. It shows occupancy map/path, camera frame, map-linked event with pending AI review, driving controls and LiDAR/left-right ToF/bumper/edge status. Values are marked as examples. Embedded in the current Google Doc with a Hebrew explanation.
+- `rover-cover-concept.png`: earlier rover/system cover illustration.
+- `driving-mapping-image-review.png`: earlier conceptual driving/mapping illustration; consult the live document for the latest camera/sensor layout.
 
-Both are illustrative design assets, not photographs of built hardware or verified test results. Captions identify them as concept illustrations. The exact application goal remains blank. The original tldraw Page 1 diagram remains in the diagram section.
-
-All five native-exported document pages were visually checked after inserting the images and adjusting cover spacing. Google Docs remains the editable source; do not overwrite collaborator edits by rebuilding from the earlier Word/PDF drafts.
+The native document now contains the team-written goal/problem. Do not restore earlier blank placeholders. The original cleaning web app concept was superseded and is not an active asset.
